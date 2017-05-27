@@ -10,10 +10,12 @@ permet de generer des fichiers de mot de passe.
 
 xchar = 'AZERTYUIOPQSDFGHJKLMWXCVBNazertyuiopqsdfghjklmwxcvbn1234567890 ,;:!/.'
 
-taille=int(argv[1])
+taille=int(sys.argv[1])
 if not taille:
     print("le premier argument doit etre la taille du mot de passe")
     sys.exit(2)
+
+print('taille du fichier en octet %d' % (len(xchar)**taille))
 
 def p(r, l):
     char = list(xchar)
